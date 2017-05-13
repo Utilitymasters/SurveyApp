@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">SurveyApp</string>
+
+
+    <string name="add_new_question">Add New Question</string>
+    <string name="add_sub_question">Add New Sub Question</string>
+    <string name="hide_sub_question">Remove Sub Question</string>
+
+
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="name">Name</string>
+    <string name="name_hint">e.g Rohit </string>
+
+    <string name="phone_hint">e.g 1234567890</string>
+
+    <string name="phone">Phone</string>
+
+    <string name="dob">Date of Birth</string>
+    <string name="dob_hint">e.g 23/10/1987 </string>
+
+    <string name="picture">Picture</string>
+
+    <string name="address">Address</string>
+
+    <string name="question_hint">Question # </string>
+    <string name="answer_hint1">Answer # 1</string>
+    <string name="answer_hint2">Answer # 2</string>
+    <string name="answer_hint3">Answer # 3</string>
+
+    <string name="add_question_error">Add at least one question.</string>
+
+    <string name="add_question_restriction_error">Can not add more then 5 question in survey.</string>
+
+
+    <string-array name="question_type">
+        <item name="1">-Single Choice</item>
+        <item name="2">-Multiple Choice</item>
+        <item name="3">-Multi-Line Choice</item>
+    </string-array>
+    <string name="title_activity_three_level_expandable_list_view">ThreeLevelExpandableListView
+    </string>
+    <string name="my_survey">My Survey</string>
+    <string name="new_survey">New Survey</string>
+
+</resources>

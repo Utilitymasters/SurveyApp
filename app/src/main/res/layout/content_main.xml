@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/txtAddNewQuestion"
+        android:layout_margin="@dimen/margin_5">
+
+    <RelativeLayout
+        android:id="@+id/dynamicContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include android:id="@+id/app_bar" layout="@layout/app_bar"/>
+
+
+        <TextView
+            android:id="@+id/txtInfoError"
+            style="@style/smallTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/txt_error_height"
+            android:gravity="center|left"
+            android:textColor="@color/colorRed"
+            android:drawableLeft="@drawable/ic_error_outline_black_24dp"
+            android:visibility="gone"
+           android:layout_below="@+id/app_bar"
+            android:layout_centerHorizontal="true"
+            />
+
+        <FrameLayout
+            android:id="@+id/survey_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtInfoError">
+
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/survey_questions_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/survey_info_container">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/survey_questions_container1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/survey_questions_container">
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/survey_questions_container2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/survey_questions_container1">
+
+        </FrameLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/survey_questions_container3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/survey_questions_container2">
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/survey_questions_container4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/survey_questions_container3">
+
+        </FrameLayout>
+
+
+
+    </RelativeLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/txtAddNewQuestion"
+        style="@style/smallTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llSaveCancelLayout"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margin_5"
+        android:drawableLeft="@drawable/ic_add_circle_outline_black_24dp"
+        android:gravity="center_vertical|right"
+        android:text="@string/add_new_question" />
+
+
+    <LinearLayout
+        android:id="@+id/llSaveCancelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/box_height"
+
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/mediumBtnStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/mediumBtnStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel" />
+
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

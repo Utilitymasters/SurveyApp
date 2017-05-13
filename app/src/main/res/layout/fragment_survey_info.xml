@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_5"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtName"
+        style="@style/smallTextStyle"
+        android:layout_width="@dimen/txt_width"
+        android:layout_height="@dimen/txt_height"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/margin_5"
+        android:text="@string/name" />
+
+    <EditText
+        android:id="@+id/edtName"
+        style="@style/smallEditTextStyle"
+        android:layout_width="@dimen/edt_width"
+        android:layout_height="@dimen/txt_height"
+        android:layout_toRightOf="@+id/txtName"
+        android:hint="@string/name_hint"/>
+
+    <TextView
+        android:id="@+id/txtDob"
+        style="@style/smallTextStyle"
+        android:layout_width="@dimen/txt_width"
+        android:layout_height="@dimen/txt_height"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtName"
+        android:layout_margin="@dimen/margin_5"
+        android:text="@string/dob" />
+
+    <EditText
+        android:id="@+id/edtDob"
+        style="@style/smallEditTextStyle"
+        android:layout_width="@dimen/edt_width"
+        android:layout_height="@dimen/txt_height"
+        android:layout_below="@+id/txtName"
+        android:layout_toRightOf="@+id/txtDob"
+        android:hint="@string/dob_hint"
+        android:inputType="date" />
+
+    <ImageButton
+        android:id="@+id/dateImgBtn"
+        android:layout_width="40dp"
+        android:layout_height="@dimen/txt_height"
+        android:layout_below="@+id/txtName"
+        android:layout_toRightOf="@+id/edtDob"
+        android:background="@drawable/ic_date_range_black_24dp" />
+
+    <TextView
+        android:id="@+id/txtPhone"
+        style="@style/smallTextStyle"
+        android:layout_width="@dimen/txt_width"
+        android:layout_height="@dimen/txt_height"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtDob"
+        android:layout_margin="@dimen/margin_5"
+        android:text="@string/phone" />
+
+    <EditText
+        android:id="@+id/edtPhone"
+        style="@style/smallEditTextStyle"
+        android:layout_width="@dimen/edt_width"
+        android:layout_height="@dimen/txt_height"
+        android:layout_below="@+id/txtDob"
+        android:layout_toRightOf="@+id/txtPhone"
+        android:inputType="phone"
+        android:hint="@string/phone_hint"/>
+
+    <TextView
+        android:id="@+id/txtPicture"
+        style="@style/smallTextStyle"
+        android:layout_width="@dimen/txt_width"
+        android:layout_height="@dimen/txt_height"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtPhone"
+        android:layout_margin="@dimen/margin_5"
+        android:text="@string/picture" />
+
+
+    <ImageButton
+        android:id="@+id/cameraImgBtn"
+        android:layout_width="40dp"
+        android:layout_height="@dimen/txt_height"
+        android:layout_below="@+id/txtPhone"
+        android:layout_toRightOf="@+id/txtPicture"
+        android:background="@drawable/ic_camera_alt_black_24dp" />
+
+
+
+
+    <TextView
+        android:id="@+id/txtAddress"
+        style="@style/smallTextStyle"
+        android:layout_width="@dimen/txt_width"
+        android:layout_height="@dimen/txt_height"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtPicture"
+        android:layout_margin="@dimen/margin_5"
+        android:text="@string/address" />
+
+    <EditText
+        android:id="@+id/edtAddress"
+        style="@style/smallEditTextStyle"
+        android:layout_width="@dimen/edt_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPicture"
+        android:layout_toRightOf="@+id/txtAddress"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:maxLines="10"/>
+</RelativeLayout>

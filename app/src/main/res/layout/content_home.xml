@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/margin_10">
+
+        <include android:id="@+id/app_bar" layout="@layout/app_bar"
+            />
+
+        <TextView
+            android:id="@+id/txtName"
+            style="@style/mediumTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/txt_height"
+            android:layout_margin="@dimen/margin_5"
+            android:layout_below="@+id/app_bar"
+            android:text="@string/name" />
+
+
+        <TextView
+            android:id="@+id/txtPhone"
+            style="@style/mediumTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/txt_height"
+            android:layout_below="@+id/txtName"
+            android:layout_margin="@dimen/margin_5"
+            android:text="@string/phone" />
+
+        <TextView
+            android:id="@+id/txtAddress"
+            style="@style/mediumTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/txt_height"
+            android:layout_below="@+id/txtPhone"
+            android:layout_margin="@dimen/margin_5"
+            android:text="@string/address" />
+
+
+        <LinearLayout
+            android:id="@+id/linear_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_below="@+id/txtAddress"
+            android:orientation="vertical"
+            android:background="@drawable/rectangle"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>
