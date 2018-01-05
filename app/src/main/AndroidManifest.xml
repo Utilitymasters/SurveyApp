@@ -38,6 +38,9 @@
             android:name=".view.activity.MySurveyActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".view.activity.SurveyListActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".view.activity.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>

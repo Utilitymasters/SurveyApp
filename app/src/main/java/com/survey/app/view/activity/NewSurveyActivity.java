@@ -76,7 +76,7 @@ public class NewSurveyActivity extends BaseActivity implements SurveyView {
     ArrayList<Question> questionsList =new ArrayList<>();
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_survey);
         this.savedInstanceState = savedInstanceState;
@@ -116,7 +116,7 @@ public class NewSurveyActivity extends BaseActivity implements SurveyView {
             surveyInfoFragment.setArguments(getIntent().getExtras());
 
             // Add the fragment to the 'fragment_container' FrameLayout
-            getSupportFragmentManager().beginTransaction()
+            getFragmentManager().beginTransaction()
                     .add(surveyInfoContainer.getId(), surveyInfoFragment).commit();
         }
     }
