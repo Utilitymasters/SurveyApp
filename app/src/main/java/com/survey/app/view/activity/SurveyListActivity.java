@@ -3,6 +3,7 @@ package com.survey.app.view.activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,7 @@ import com.survey.app.model.SurveyInfo;
 import java.util.ArrayList;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by webonise on 5/1/18.
@@ -36,6 +38,7 @@ public class SurveyListActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.survey_list);
+        ButterKnife.bind(this);
         ArrayList<Question> questions = new ArrayList<>();
         if (getIntent() != null) {
             Bundle bundle = getIntent().getBundleExtra("bundle");
@@ -44,6 +47,8 @@ public class SurveyListActivity extends BaseActivity {
         }
 
         questionAdapter = new QuestionAdapter(questions);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        questionRecycleView.setLayoutManager(linearLayoutManager);
         questionRecycleView.setAdapter(questionAdapter);
     }
 
@@ -73,11 +78,11 @@ public class SurveyListActivity extends BaseActivity {
                 holder.txtAnswer1.setText(answerArrayList.get(0).getAnswer());
                 holder.txtAnswer1.setVisibility(View.VISIBLE);
             }
-            if (answerArrayList.get(1) != null) {
+            if (answerArrayList.size()> 1 && answerArrayList.get(1) != null) {
                 holder.txtAnswer2.setText(answerArrayList.get(1).getAnswer());
                 holder.txtAnswer1.setVisibility(View.VISIBLE);
             }
-            if (answerArrayList.get(2) != null) {
+            if (answerArrayList.size()> 2 && answerArrayList.get(2) != null) {
                 holder.txtAnswer3.setText(answerArrayList.get(2).getAnswer());
                 holder.txtAnswer1.setVisibility(View.VISIBLE);
             }

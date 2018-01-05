@@ -289,7 +289,7 @@ public class NewSurveyActivity extends BaseActivity implements SurveyView {
     public void navigateToHome() {
         Bundle bundle = new Bundle();
         bundle.putSerializable("surveyInfo",surveyInfoFragment.getSurveyInfo());
-        Intent intent =new Intent(this, MySurveyActivity.class);
+        Intent intent =new Intent(this, SurveyListActivity.class);
         intent.putExtra("bundle",bundle);
         startActivity(intent);
         finish();
